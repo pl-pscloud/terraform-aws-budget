@@ -1,5 +1,5 @@
 resource "aws_budgets_budget" "pscloud-budget" {
-  name              = "${var.pscloud_company}_budget_${var.pscloud_period}_${var.pscloud_env}"
+  name              = "${var.pscloud_company}_budget_${var.pscloud_env} - lower(${var.pscloud_env}) - ${var.pscloud_limit_amount} ${var.pscloud_limit_unit}"
   budget_type       = var.pscloud_budget_type
   limit_amount      = var.pscloud_limit_amount
   limit_unit        = var.pscloud_limit_unit
