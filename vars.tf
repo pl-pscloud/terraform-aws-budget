@@ -1,7 +1,7 @@
 variable "pscloud_env" {}
 variable "pscloud_company" {}
 
-variable "pscloud_period" { default = "monhtly" }
+variable "pscloud_period" { default = "MONTHLY" }
 variable "pscloud_limit_unit" { default = "USD" }
 variable "pscloud_budget_type" { default = "COST"}
 variable "pscloud_limit_amount"  {}
