@@ -1,5 +1,5 @@
 resource "aws_budgets_budget" "pscloud-budget" {
-  name              = "${var.pscloud_company}_budget_${var.pscloud_env} - ${var.pscloud_period} - ${var.pscloud_limit_amount} ${var.pscloud_limit_unit}"
+  name              = upper("${var.pscloud_company}_budget_${var.pscloud_env} - ${var.pscloud_period} ${var.pscloud_notification_type} - ${var.pscloud_limit_amount} ${var.pscloud_limit_unit}")
   budget_type       = var.pscloud_budget_type
   limit_amount      = var.pscloud_limit_amount
   limit_unit        = var.pscloud_limit_unit
